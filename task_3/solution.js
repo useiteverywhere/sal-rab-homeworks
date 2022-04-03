@@ -17,9 +17,6 @@ product = {id: id, title: title, count: count, price: price};
     // например,
     // 5 × 500.00 ₽ = 2500 ₽
 
-    let itemCountText = product.count * product.price;
-    console.log(itemCountText);
-
     // 1. Создайте переменную itemCountText, равную пустой строке
     // 2. Присвойте переменной itemCountText результат склеивания itemCountText и количества
     // 3. Присвойте переменной itemCountText результат склеивания itemCountText и ` × `
