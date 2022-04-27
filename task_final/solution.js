@@ -11,7 +11,8 @@
 // В объекте data есть свойства:
 // - client - строка, имя клиента + телефон клиента;
 // - order - объект, содержащий данные о заказе:
-//     - address - строка с адресом доставки, записанным человекопонятным языком (как в примере)
+//     - address - строка с адресом доставки, записанным человекопонятным 
+// языком (как в примере)
 //     - sum - стоимость заказа с учетом скидок и доставки
 // - goods: массив объектов с информацией о позициях заказа:
 //     - title - название позиции
@@ -32,20 +33,22 @@
 //      ]
 //    }
 // }
-
+ 
 function sendRequest(name, phone, address, goods, sum) {
-    let data = {goods: [], order: {}};
+    let address = {street, house, entrance, floor, flat};
+    let data = {client: `${name} + ${phone}`, order: {address, sum},  goods: [{title, count}]};
 
     let countOfGoods = goods.length;
 
-    for (let i = 0; i <= countOfGoods; i += 1) {
+    for (let i = 0; i < countOfGoods; i += 1) {
         data.goods.push(goods[i].title);
+        data.goods.push(goods[i].count);
     }
 
     data.order.address = address;
     data.order.sum = name + phone + address + goods + sum;
 
-    data.client = 'Иван';
+    data.client = client;
 
     let jsonData = JSON.stringify(data);
 
